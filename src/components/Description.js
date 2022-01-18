@@ -1,9 +1,11 @@
 import React from "react";
 import './Description.css';
-const Description=()=>{
+const Description=(props)=>{
     return(
         <div className="description">
-            <div className="description--image"></div>
+            <div className="description--image">
+                <img src={props.image}></img>
+            </div>
             <div className="description--details">
                 <div className="description--text">
                 <p>تاریخ کهن ایران زمین با پیشینه ای غنی از فرهنگ و هنر، از دیرباز با شعر و
@@ -14,11 +16,12 @@ const Description=()=>{
                      عاشقانه و عارفانه عالم گیر در دیوان حافظ، اندیشه 
                     ژرف و عرفان ناب عطار نیشابوری همه و همه همچون 
                     مرهمی بر زخم های کوچک و بزرگش تسکین داده اند.</p>
+                    <div className="description--btns">
+                        <button> فال حافظ</button>
+                        <button> گنجینه اشعار</button>
+                    </div>
                 </div>
-                <div className="description--btns">
-                    <button> فال حافظ</button>
-                    <button> گنجینه اشعار</button>
-                </div>
+                
             </div>
         </div>
     )
