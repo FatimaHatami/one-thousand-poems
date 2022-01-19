@@ -1,0 +1,46 @@
+.container{
+    background-color: rgba(236, 199, 91,.8);
+    height: 100vh;
+    width: 47%;
+    margin-left: auto;
+    margin-right: 5%;
+    border-radius: 15px;
+    padding: 30px 20px;
+}
+.poem--container, .description--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px 40px;
+}
+.poem--name{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.poem--container audio{
+    margin-top: 20px;
+}
+.description--container{
+    margin: 20px 0;
+}
+.description--container h2{
+    font-size: 16px;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+.back-btn{
+    display: block;
+    background-color: #DFE9F3;
+    height: 40px;
+    width: 140px;
+    border-radius: 15px 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #000;
+}
+

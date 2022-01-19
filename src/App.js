@@ -5,10 +5,15 @@ import React from 'react';
 import Ganjour from './components/Ganjour';
 
 
+
 function App() {
   return (
     <div className="App">
       <Ganjour logo={logo} image={desc}/>
+
+      
+        
+      
     </div>
   );
 }

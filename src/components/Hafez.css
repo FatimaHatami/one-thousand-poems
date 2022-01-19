@@ -1,6 +1,9 @@
 .Hafez{
     background-image: url(../hafez-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     width: 100%;
-    background-color: orange;
+    display: flex;
+    font-family: 'rezvan', sans-serif;
 }
