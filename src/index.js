@@ -2,12 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Hafez from './components/Hafez';
+import About from './components/About';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
 
+
+
+// const rootElement=document.getElementById("root");
+// render(<App/>,rootElement)
 ReactDOM.render(
+  <BrowserRouter>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Routes>
+    <Route path="/" element={<App />}/>
+    <Route path="/Hafez" element={<Hafez/>}/>
+    <Route path="/About" element={<About/>}/>
+    </Routes>
+  </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
