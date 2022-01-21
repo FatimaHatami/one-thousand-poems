@@ -7,6 +7,7 @@
     border-radius: 15px;
     padding: 30px 20px;
 }
+
 .poem--container, .description--container{
     display: flex;
     flex-direction: column;

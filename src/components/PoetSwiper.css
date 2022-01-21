@@ -1,0 +1,39 @@
+
+.poets-swiper{
+    height:100%;
+    width: 187px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.16);
+    margin: 5px 0;
+}
+.poets-swiper img{
+    width: 200px;
+    height:200px;
+    object-fit: contain;
+}
+.poets-swiper h1{
+    font-size: 16px;
+    margin: 20px 0 10px 0;
+}
+.swiper-button-prev,
+.swiper-button-next{
+    background-color: #6788BE;
+    border-radius: 50%;
+    height: 40px !important;
+    width: 40px !important;
+    position: relative;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size: 16px !important;
+    color:#fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

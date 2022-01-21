@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Hafez from './components/Hafez';
 import About from './components/About';
+import Poets from './components/Poets';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ ReactDOM.render(
     <Routes>
     <Route path="/" element={<App />}/>
     <Route path="/Hafez" element={<Hafez/>}/>
+    <Route path="/Poets" element={<Poets/>}/>
     <Route path="/About" element={<About/>}/>
     </Routes>
   </React.StrictMode>

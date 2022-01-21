@@ -10,7 +10,7 @@ const Header= () =>{
             <nav className="navbar">
                 <ul className="navbar--list">
                     <li> <Link to="/Hafez">فال حافظ</Link> </li>
-                    <li> <a href="#">گنجینه اشعار </a> </li>
+                    <li> <Link to="/Poets">گنجینه اشعار</Link></li>
                     <li> <Link to="/About">درباره ما</Link> </li>
                 </ul>
             </nav>
