@@ -4,8 +4,9 @@ import 'swiper/css';
 import './PoetSwiper.css'
 import 'swiper/css/navigation'
 import SwiperCore, { Navigation } from 'swiper';
-const POETS_API="https://ganjgah.ir/api/ganjoor/poets";
+const RAND_POEMS_API=`https://ganjgah.ir/api/ganjoor/poem/random?poetId=`
 const IMAGE_API="https://ganjgah.ir/api/ganjoor/poet/image";
+const POETS_API="https://ganjgah.ir/api/ganjoor/poets";
 SwiperCore.use(Navigation);
 const PoetSwiper=()=>{
     const [Poets,setPoets]=useState([]);
@@ -20,6 +21,14 @@ const PoetSwiper=()=>{
     // Poets.map((poet)=>(
     //     console.log(poet)
     // ))
+    const ClickHandler=()=>{
+        fetch(RAND_POEMS_API)
+        .then((res)=>res.json())
+        .then((data)=>{
+            console.log(data)
+            
+        })
+    }
     return(
         <Swiper
             navigation={true}
@@ -31,10 +40,13 @@ const PoetSwiper=()=>{
         >
             
             {Poets.map((poet)=>(
-                <SwiperSlide className='poets-swiper'>
-                    <img src={IMAGE_API+poet.fullUrl+".gif"}></img>
-                    <h1>{poet.name}</h1>
-                </SwiperSlide>
+                    <SwiperSlide className='poets-swiper' >
+                       <a  onClick={ClickHandler}>
+                       <img src={`${IMAGE_API+poet.fullUrl}.gif`}></img>
+                        <h1>{poet.name}</h1>
+                       </a>
+                    </SwiperSlide>
+                    
             ))}
             {/* <SwiperSlide className='poets-swiper'> 
                 <img src=""></img>

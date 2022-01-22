@@ -1,33 +1,36 @@
 import { Link } from "react-router-dom";
 import './Faal.css';
-import {useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+// import HtmlToReactParser from "html-react-parser";
 
 const FEATURED_API="https://ganjgah.ir/api/ganjoor/hafez/faal";
+const SOUND_API="https://ganjgah.ir/api/audio/file/";
 const Faal=()=>{
+    const [faal, setFaal]=useState([]);   
+     useEffect(()=>{
+         fetch(FEATURED_API)
+    .then((res)=>res.json())
+    .then((data)=>{ 
+         setFaal(data);
+    })
+   },[]);
+   
+   console.log(faal);
+      
+   console.log(faal.recitations["0"]);
 
-    const [poem,setPoem]=useState([]);
-        useEffect(()=>{
-            fetch(FEATURED_API)
-            .then((res)=>res.json())
-            .then((data)=>{
-                setPoem(data);
-                console.log(data.recitations["0"]['mp3Url']);
-                let audioUrl=data.recitations["0"]["mp3Url"];
-                let audio=document.getElementById("poemAduio");
-                audio.innerHTML=`<source src="${audioUrl}" type="audio/mpeg"></source>`;
-                
-            });
-    },[]);
-    
+//    const parse=require('html-react-parser');
+
     return(
         <div className="poem">
             <div className="container">
                 <div className="poem--container">
-                    <h1 className="poem--name">{poem.title}</h1>
-                    <div className="poem--text">{poem.plainText}</div>
-                    <div className="poem--audio" >
-                        <audio controls id="poemAduio"></audio>
-                    </div>
+                    <h1 className="poem--name">{`${faal.title}:`}</h1>
+                    <div className="poem--text">{faal.plainText}</div>
+                    <audio controls>
+                        <source src={"#"}></source>
+                    </audio>
                 </div>
                 <div className="description--container">
                     <h2>:ای صاحب فال</h2>

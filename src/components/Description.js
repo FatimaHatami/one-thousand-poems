@@ -1,5 +1,6 @@
 import React from "react";
 import './Description.css';
+import { Link } from "react-router-dom";
 const Description=(props)=>{
     return(
         <div className="description">
@@ -17,8 +18,8 @@ const Description=(props)=>{
                     ژرف و عرفان ناب عطار نیشابوری همه و همه همچون 
                     مرهمی بر زخم های کوچک و بزرگش تسکین داده اند.</p>
                     <div className="description--btns">
-                        <button> فال حافظ</button>
-                        <button> گنجینه اشعار</button>
+                        <button><Link to="/Hafez">فال حافظ</Link></button>
+                        <button> <Link to="/Poets">گنجینه اشعار</Link></button>
                     </div>
                 </div>
                 
